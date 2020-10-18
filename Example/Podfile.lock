@@ -1,0 +1,27 @@
+PODS:
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - HomeKitLightBulbHelper (0.1.0)
+
+DEPENDENCIES:
+  - FBSnapshotTestCase (~> 2.1.4)
+  - HomeKitLightBulbHelper (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - FBSnapshotTestCase
+
+EXTERNAL SOURCES:
+  HomeKitLightBulbHelper:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  HomeKitLightBulbHelper: 5ec25b55e64cdbf775d712c31ee3552e5092328a
+
+PODFILE CHECKSUM: 06e4b1e5a19577d9e88cc2b5a3b71e96c7a5e319
+
+COCOAPODS: 1.10.0.rc.1

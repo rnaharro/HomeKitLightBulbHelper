@@ -1,0 +1,6 @@
+framework module HomeKitLightBulbHelper {
+  umbrella header "HomeKitLightBulbHelper-umbrella.h"
+
+  export *
+  module * { export * }
+}

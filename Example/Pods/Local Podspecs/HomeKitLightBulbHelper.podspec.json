@@ -1,0 +1,23 @@
+{
+  "name": "HomeKitLightBulbHelper",
+  "version": "0.1.0",
+  "summary": "HomeKit Light Bulbs Helper.",
+  "description": "HomeKit Light Bulbs Helper.",
+  "homepage": "https://github.com/rnaharro/HomeKitLightBulbHelper",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Ricardo N.": "rnaharro@icloud.com"
+  },
+  "source": {
+    "git": "https://github.com/rnaharro/HomeKitLightBulbHelper.git",
+    "tag": "0.1.0"
+  },
+  "social_media_url": "https://twitter.com/AppDelegate",
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "HomeKitLightBulbHelper/Classes/**/*"
+}
