@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'HomeKitLightBulbHelper_Example' do
+  pod 'HomeKitLightBulbHelper', :path => '../'
+
+  target 'HomeKitLightBulbHelper_Tests' do
+    inherit! :search_paths
+
+    pod 'FBSnapshotTestCase' , '~> 2.1.4'
+  end
+end
