@@ -1,42 +1,17 @@
-#
-# Be sure to run `pod lib lint HomeKitLightBulbHelper.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see https://guides.cocoapods.org/syntax/podspec.html
-#
-
 Pod::Spec.new do |s|
   s.name             = 'HomeKitLightBulbHelper'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of HomeKitLightBulbHelper.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
+  s.summary          = 'HomeKit Light Bulb Helper.'
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+HomeKit Light Bulb Helper. Only retrieve rooms with light bulbs that supports hue or saturation.
                        DESC
 
-  s.homepage         = 'https://github.com/Ricardo N./HomeKitLightBulbHelper'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.homepage         = 'https://github.com/rnaharro/HomeKitLightBulbHelper'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Ricardo N.' => 'ricardo.naharro@i3television.es' }
-  s.source           = { :git => 'https://github.com/Ricardo N./HomeKitLightBulbHelper.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.author           = { 'Ricardo N.' => 'rnaharro@icloud.com' }
+  s.source           = { :git => 'https://github.com/rnaharro/HomeKitLightBulbHelper.git', :tag => s.version.to_s }
+  s.social_media_url = 'https://twitter.com/AppDelegate'
 
-  s.ios.deployment_target = '8.0'
-
+  s.ios.deployment_target = '14.0'
   s.source_files = 'HomeKitLightBulbHelper/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'HomeKitLightBulbHelper' => ['HomeKitLightBulbHelper/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end

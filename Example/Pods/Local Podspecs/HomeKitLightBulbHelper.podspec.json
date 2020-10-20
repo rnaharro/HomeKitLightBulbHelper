@@ -1,8 +1,8 @@
 {
   "name": "HomeKitLightBulbHelper",
   "version": "0.1.0",
-  "summary": "HomeKit Light Bulbs Helper.",
-  "description": "HomeKit Light Bulbs Helper.",
+  "summary": "A short description of HomeKitLightBulbHelper.",
+  "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/rnaharro/HomeKitLightBulbHelper",
   "license": {
     "type": "MIT",
@@ -17,7 +17,7 @@
   },
   "social_media_url": "https://twitter.com/AppDelegate",
   "platforms": {
-    "ios": "8.0"
+    "ios": "14.0"
   },
   "source_files": "HomeKitLightBulbHelper/Classes/**/*"
 }
