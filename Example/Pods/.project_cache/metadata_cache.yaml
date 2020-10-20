@@ -1,0 +1,16 @@
+FBSnapshotTestCase:
+  LABEL: FBSnapshotTestCase
+  PROJECT_PATH: FBSnapshotTestCase.xcodeproj
+  UUID: A637EF3F41FF2174BB31FB305960CBFB
+HomeKitLightBulbHelper:
+  LABEL: HomeKitLightBulbHelper
+  PROJECT_PATH: HomeKitLightBulbHelper.xcodeproj
+  UUID: 7BFBE483A4B8374CB48CAAD5E6ED06E7
+Pods-HomeKitLightBulbHelper_Example:
+  LABEL: Pods-HomeKitLightBulbHelper_Example
+  PROJECT_PATH: Pods.xcodeproj
+  UUID: BE0429F7B0B1E4F930A8C34B590B7226
+Pods-HomeKitLightBulbHelper_Tests:
+  LABEL: Pods-HomeKitLightBulbHelper_Tests
+  PROJECT_PATH: Pods.xcodeproj
+  UUID: A400954E74368C39A274C76985EFF7CD

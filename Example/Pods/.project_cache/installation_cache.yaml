@@ -1,0 +1,39 @@
+BUILD_CONFIGURATIONS:
+  Debug: :debug
+  Release: :release
+CACHE_KEYS:
+  FBSnapshotTestCase:
+    BUILD_SETTINGS_CHECKSUM:
+      FBSnapshotTestCase:
+        :debug: 4e5ce6d4cf1ede6ed6e99206b1a05f8f
+        :release: 4e5ce6d4cf1ede6ed6e99206b1a05f8f
+    CHECKSUM: 094f9f314decbabe373b87cc339bea235a63e07a
+    PROJECT_NAME: FBSnapshotTestCase
+    SPECS:
+      - FBSnapshotTestCase (2.1.4)
+      - FBSnapshotTestCase/Core (2.1.4)
+      - FBSnapshotTestCase/SwiftSupport (2.1.4)
+  HomeKitLightBulbHelper:
+    BUILD_SETTINGS_CHECKSUM:
+      HomeKitLightBulbHelper:
+        :debug: 50c5c7630ed2a913306999d3375561d6
+        :release: 50c5c7630ed2a913306999d3375561d6
+    CHECKSUM: 1e98ef49b764e04621f37fff7545d36f8ee143c0
+    FILES:
+      - "../../HomeKitLightBulbHelper/Classes/HomeKitHelper.swift"
+      - "../../LICENSE"
+      - "../../README.md"
+    PROJECT_NAME: HomeKitLightBulbHelper
+    SPECS:
+      - HomeKitLightBulbHelper (0.1.0)
+  Pods-HomeKitLightBulbHelper_Example:
+    BUILD_SETTINGS_CHECKSUM:
+      Debug: 31f6071886e24cb92b9ef5e03405851e
+      Release: 31f6071886e24cb92b9ef5e03405851e
+  Pods-HomeKitLightBulbHelper_Tests:
+    BUILD_SETTINGS_CHECKSUM:
+      Debug: dd517ce2524ef9e6b7471ed5ea094a18
+      Release: dd517ce2524ef9e6b7471ed5ea094a18
+OBJECT_VERSION: 46
+PLUGINS:
+  {}
