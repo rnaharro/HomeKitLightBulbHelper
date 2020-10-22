@@ -1,7 +1,37 @@
 import HomeKit
 
 public class HomeKitHelper: NSObject {
-    private var didUpdateHomesCompletion: () -> Void
+    enum E : Error {
+        case config(message: String)
+    }
+
+    private static var sharedInstance: HomeKitHelper!
+
+    private init(didUpdateHomes: (() -> Void)?) {
+        didUpdateHomesCompletion = didUpdateHomes
+        manager = HMHomeManager()
+
+        super.init()
+        manager.delegate = self
+        HomeKitHelper.sharedInstance = self
+    }
+
+    public static func shared(didUpdateHomes: (() -> Void)?) throws -> HomeKitHelper {
+        switch (sharedInstance, didUpdateHomes) {
+        case let (i?, nil):
+            return i
+        case _ where sharedInstance != nil && didUpdateHomes != nil:
+            throw E.config(message: "You cannot change didUpdateHomes after initialization!")
+        case let (nil, c?):
+            sharedInstance = HomeKitHelper(didUpdateHomes: didUpdateHomes)
+            return sharedInstance
+        default:
+            sharedInstance = HomeKitHelper(didUpdateHomes: nil)
+            return sharedInstance
+        }
+    }
+
+    private(set) var didUpdateHomesCompletion: (() -> Void)?
     private var manager: HMHomeManager
     private var primaryHome: HMHome? {
         manager.primaryHome
@@ -25,16 +55,26 @@ public class HomeKitHelper: NSObject {
         primaryHome != nil
     }
 
-    public var allLightbulbServices: [HMService]? {
-        primaryHome?.servicesWithTypes([HMServiceTypeLightbulb])
+    public var savedlights: [HMService]? {
+        get {
+            var selectedLights: [HMService]?
+            if let ids = UserDefaults.standard.object(forKey: "homekitLighs") as? [String],
+               let services = manager.primaryHome?.servicesWithTypes([HMServiceTypeLightbulb]) {
+                let allLightsIds = services.compactMap { $0.uniqueIdentifier.uuidString }
+                let selectedIds = allLightsIds.filter(ids.contains)
+                selectedLights = services.filter({ selectedIds.contains($0.uniqueIdentifier.uuidString) })
+            }
+            return selectedLights
+        }
+
+        set {
+            let ids = newValue?.compactMap({ $0.uniqueIdentifier.uuidString })
+            UserDefaults.standard.setValue(ids, forKey: "homekitLighs")
+        }
     }
 
-    public init(didUpdateHomes: @escaping () -> Void) {
-        didUpdateHomesCompletion = didUpdateHomes
-        manager = HMHomeManager()
-        super.init()
-
-        manager.delegate = self
+    public var allLightbulbServices: [HMService]? {
+        primaryHome?.servicesWithTypes([HMServiceTypeLightbulb])
     }
 
     public func numberOfRooms() -> Int {
@@ -79,8 +119,7 @@ public class HomeKitHelper: NSObject {
 
 extension HomeKitHelper: HMHomeManagerDelegate {
     public func homeManagerDidUpdateHomes(_ manager: HMHomeManager) {
-        print("homes: \(manager.homes)")
-        didUpdateHomesCompletion()
+        didUpdateHomesCompletion?()
     }
 }
 
